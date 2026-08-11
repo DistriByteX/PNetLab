@@ -32,26 +32,6 @@ chmod +x install_pnetlab_v6.sh
 sudo ./install_pnetlab_v6.sh
 ```
 
-## What the script does
-
-1. Verifies the OS is Ubuntu 20.04.
-2. Installs required system packages (PHP 7.4, Apache, QEMU/KVM deps, FreeRDP, Tomcat, etc.).
-3. Downloads the PNETLab package bundle from this repo and extracts it.
-4. Installs, in order:
-   - Custom PNETLab kernel (`5.17.15-pnetlab-uksm`)
-   - Docker CE
-   - `swtpm`
-   - `pnetlab-docker`
-   - `pnetlab-schema`
-   - `pnetlab-guacamole`
-   - `pnetlab-vpcs`
-   - `pnetlab-dynamips`
-   - `pnetlab-wireshark`
-   - `pnetlab-qemu`
-   - `pnetlab` core package
-5. Applies cloud-specific tuning if it detects it's running on GCP or Azure.
-6. Sets the hostname and default credentials.
-
 ## Default credentials
 
 ```
