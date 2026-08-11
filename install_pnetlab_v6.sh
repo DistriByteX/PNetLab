@@ -12,15 +12,9 @@ GREEN='\033[32m'
 RED='\033[31m'
 NO_COLOR='\033[0m'
 
-# ==== EDIT THIS ====
-# Put the direct download link to YOUR zip here.
-# If it's a GitHub Release asset (recommended for large files, up to 2GB), it looks like:
-#   https://github.com/<user>/<repo>/releases/download/<tag>/<filename>.zip
-# If it's a small file committed to the repo, a raw.githubusercontent.com link also works,
-# but GitHub blocks committing files over 100MB without Git LFS, so Releases is safer here.
-URL_PACKAGES="https://github.com/<your-user>/<your-repo>/releases/download/<tag>/pnetlab-packages.zip"
+URL_PACKAGES="https://github.com/DistriByteX/PNetLab/raw/refs/heads/main/PNetLab-v6.zip"
 
-PACKAGES_ZIP=pnetlab-packages.zip
+PACKAGES_ZIP=PNetLab-v6.zip
 PACKAGES_DIR=/tmp/pnetlab-packages
 KERNEL=pnetlab_kernel.zip
 

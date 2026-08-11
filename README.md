@@ -1,0 +1,62 @@
+# PNetLab v6 Installer
+
+A shell script to install/upgrade **PNETLab v6** on **Ubuntu 20.04**. All PNETLab dependency packages are bundled and pulled from this repo instead of the original upstream host, so the whole install runs from one place.
+
+## Requirements
+
+- Fresh **Ubuntu 20.04** (Focal) server or VM
+- Root access
+- At least 20 GB free disk space recommended
+
+## Quick Install (one line)
+
+Run this as root on a clean Ubuntu 20.04 machine:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/DistriByteX/PNetLab/refs/heads/main/install_pnetlab_v6.sh)
+```
+
+If `curl` isn't available, use `wget` instead:
+
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/DistriByteX/PNetLab/refs/heads/main/install_pnetlab_v6.sh)
+```
+
+## Manual Install
+
+If you'd rather download and inspect the script before running it:
+
+```bash
+wget https://raw.githubusercontent.com/DistriByteX/PNetLab/refs/heads/main/install_pnetlab_v6.sh
+chmod +x install_pnetlab_v6.sh
+sudo ./install_pnetlab_v6.sh
+```
+
+## What the script does
+
+1. Verifies the OS is Ubuntu 20.04.
+2. Installs required system packages (PHP 7.4, Apache, QEMU/KVM deps, FreeRDP, Tomcat, etc.).
+3. Downloads the PNETLab package bundle from this repo and extracts it.
+4. Installs, in order:
+   - Custom PNETLab kernel (`5.17.15-pnetlab-uksm`)
+   - Docker CE
+   - `swtpm`
+   - `pnetlab-docker`
+   - `pnetlab-schema`
+   - `pnetlab-guacamole`
+   - `pnetlab-vpcs`
+   - `pnetlab-dynamips`
+   - `pnetlab-wireshark`
+   - `pnetlab-qemu`
+   - `pnetlab` core package
+5. Applies cloud-specific tuning if it detects it's running on GCP or Azure.
+6. Sets the hostname and default credentials.
+
+## Default credentials
+
+```
+Username: root
+Password: pnet
+```
+
+**Reboot after the first install** to load the new kernel and finish setup.
