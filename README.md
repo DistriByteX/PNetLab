@@ -6,7 +6,7 @@ A shell script to install/upgrade **PNETLab v6** on **Ubuntu 20.04**. All PNETLa
 
 - Fresh **Ubuntu 20.04** (Focal) server or VM
 - Root access
-- At least 20 GB free disk space recommended
+- At least 100 GB free disk space recommended
 
 ## Quick Install (one line)
 
@@ -60,3 +60,19 @@ Password: pnet
 ```
 
 **Reboot after the first install** to load the new kernel and finish setup.
+
+## Install ishare2
+
+[ishare2](https://github.com/ishare2-org/ishare2-cli) is a CLI tool you can install alongside PNETLab. Pick one:
+
+Using `wget`:
+
+```bash
+wget -O /usr/sbin/ishare2 https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
+```
+
+Using `curl`:
+
+```bash
+curl -O /usr/sbin/ishare2 https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
+```
