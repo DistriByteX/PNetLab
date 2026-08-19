@@ -5,7 +5,6 @@ A shell script to install/upgrade **PNETLab v6** on **Ubuntu 20.04**. All PNETLa
 ## Requirements
 
 - Fresh **Ubuntu 20.04** (Focal) server or VM
-- Root access
 - At least 100 GB free disk space recommended
 
 ## Quick Install (one line)
