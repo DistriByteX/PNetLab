@@ -47,11 +47,11 @@ Password: pnet
 Using `wget`:
 
 ```bash
-wget -O /usr/sbin/ishare2 https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
+wget -qO- https://ishare2.sh/install | sh
 ```
 
 Using `curl`:
 
 ```bash
-curl -O /usr/sbin/ishare2 https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
+curl https://ishare2.sh/install | sh
 ```
